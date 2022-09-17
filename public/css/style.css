@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+* {
+  font-family: "Roboto";
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
+header {
+  width: 100%;
+  height: 44px;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.topo {
+  width: 975px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topo div {
+  display: flex;
+}
+.topo-mobile {
+  display: none;
+}
+
+div > img {
+  height: 22px;
+}
+div > ion-icon {
+  margin: 0 5px;
+  font-size: 18px;
+}
+.barra {
+  width: 1px;
+  background-color: #dbdbdb;
+  margin-right: 5px;
+}
+.pesquisa {
+  width: 200px;
+  height: 25px;
+  text-align: center;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  color: #979797;
+  background-color: #fafafa;
+}
+
+.conteudo {
+  display: flex;
+  width: 935px;
+  margin: 0 auto;
+}
+.esquerdo {
+  width: 60%;
+}
+.caixa-stories {
+  height: 88px;
+  margin-top: 88px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+.caixa-stories div {
+  width: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+.caixa-stories span {
+  font-size: 14px;
+  font-weight: 400;
+}
+.botao-stores {
+  font-size: 30px;
+  color: #f5f5f5;
+  position: absolute;
+  right: 0;
+}
+.foto-stores {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 2px solid red;
+}
+.caixa-posts {
+  width: 100%;
+}
+.post {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  margin: 20px 0;
+}
+.foto-post {
+  width: 100%;
+  height: 100%;
+}
+.superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.superior div {
+  display: flex;
+  align-items: center;
+  margin: 10px 15px;
+}
+.superior img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.superior span {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.more ion-icon {
+  font-size: 15px;
+}
+.icones-inferior {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.icones-inferior ion-icon {
+  font-size: 18px;
+}
+.icones-inferior div {
+  margin: 0 10px;
+}
+.comentarios {
+  margin: 10px 10px;
+  display: flex;
+  align-items: center;
+}
+.comentarios span {
+  font-size: 12px;
+  margin: 0 5px;
+}
+.comentarios a {
+  text-decoration: none;
+  color: initial;
+  font-weight: bold;
+}
+.comentarios img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.direito {
+  width: 40%;
+}
+.sidebar {
+  margin-top: 20px;
+  width: 293px;
+  margin-top: 88px;
+}
+.perfil-principal {
+  margin: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.perfil-principal img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.perfil-principal span {
+  font-size: 12px;
+  font-weight: 500;
+}
+.perfil-principal p {
+  font-size: 12px;
+  font-weight: 300;
+  color: #979797;
+}
+.perfil {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.perfil img {
+  margin-right: 10px;
+}
+.sugestao {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 10px 0;
+}
+.sugestao p {
+  font-weight: 500;
+}
+.outro img {
+  width: 30px;
+  height: 30px;
+}
+.outro {
+  display: flex;
+  margin: 10px 0;
+}
+.outro div {
+  margin: 0 5px 0 0;
+}
+.outro .div-seguir {
+  margin: 0 0 0 90px;
+}
+.seguir {
+  color: #139ef2;
+}
+footer {
+  display: none;
+}
+@media (max-width: 974px) {
+  main {
+    display: flex;
+  }
+  .direito {
+    display: none;
+  }
+  .conteudo {
+    display: flex;
+    justify-content: center;
+  }
+  .esquerdo {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .caixa-stories {
+    width: 100%;
+  }
+}
+@media (max-width: 614px) {
+  footer {
+    position: fixed;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff;
+    bottom: 0;
+    left: 0;
+  }
+  .topo {
+    display: none;
+  }
+  .topo-mobile {
+    width: 100%;
+    display: initial;
+    display: flex;
+    justify-content: space-between;
+  }
+  .conteudo {
+    width: 100%;
+  }
+
+  .esquerdo {
+    width: 100%;
+  }
+  .direito {
+    display: none;
+  }
+  .caixa-stories {
+    width: 100%;
+    background-color: #e5e5e5;
+    border: none;
+  }
+  .post {
+    width: 100%;
+  }
+}
