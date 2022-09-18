@@ -1,129 +1,94 @@
+const posts = [
+  {
+    usuarioImagem:
+      "https://images.pexels.com/photos/13428312/pexels-photo-13428312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    usuarioNome: "anderson",
+    imagemPost:
+      "https://images.pexels.com/photos/13428310/pexels-photo-13428310.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    curtidoPor: "juniorsouza",
+    imagemSeguidor:
+      "https://images.pexels.com/photos/10954791/pexels-photo-10954791.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    numeroCurtidas: 964,
+  },
+  {
+    usuarioImagem:
+      "https://images.pexels.com/photos/10083650/pexels-photo-10083650.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    usuarioNome: "klauss",
+    imagemPost:
+      "https://images.pexels.com/photos/13651665/pexels-photo-13651665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    curtidoPor: "zezinho",
+    imagemSeguidor:
+      "https://images.pexels.com/photos/11735730/pexels-photo-11735730.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    numeroCurtidas: 300,
+  },
+];
+
+function Superior(props) {
+  return (
+    <div className="superior">
+      <div>
+        <img src={props.usuarioImagem} alt="Imagem Perfil Usuario" />
+        <span>{props.usuarioNome}</span>
+      </div>
+      <div className="more">
+        <ion-icon name="ellipsis-horizontal"></ion-icon>
+      </div>
+    </div>
+  );
+}
+function Inferior(props) {
+  return (
+    <div className="inferior">
+      <div className="icones-inferior">
+        <div>
+          <ion-icon name="heart-outline"></ion-icon>
+          <ion-icon name="chatbubble-outline"></ion-icon>
+          <ion-icon name="paper-plane-outline"></ion-icon>
+        </div>
+        <div>
+          <ion-icon name="bookmark-outline"></ion-icon>
+        </div>
+      </div>
+      <div className="comentarios">
+        <img src={props.imagemSeguidor} alt="Imagem Seguidor" />
+        <span>
+          Curtido por {props.curtidoPor} e outras {props.numeroCurtidas} pessoas
+        </span>
+      </div>
+    </div>
+  );
+}
+function Post(props) {
+  return (
+    <div className="post">
+      <Superior
+        usuarioImagem={props.usuarioImagem}
+        usuarioNome={props.usuarioNome}
+      />
+      <img className="foto-post" src={props.imagemPost} alt="POST" />
+      <Inferior
+        curtidoPor={props.curtidoPor}
+        imagemSeguidor={props.imagemSeguidor}
+        numeroCurtidas={props.numeroCurtidas}
+      />
+    </div>
+  );
+}
+
 export default function CaixaPosts() {
   return (
     <div className="caixa-posts">
-      <div className="post">
-        <div className="superior">
-          <div>
-            <img
-              src="https://styles.redditmedia.com/t5_12nxv0/styles/communityIcon_h8x1zlgsmt231.jpg?width=256&format=pjpg&s=148eb490d4e25fa3c4f1890ccefcf4d633f86fdc"
-              alt=""
-            />
-            <span>pescocofino</span>
-          </div>
-          <div className="more">
-            <ion-icon name="ellipsis-horizontal"></ion-icon>
-          </div>
-        </div>
-        <img
-          className="foto-post"
-          src="https://i.redd.it/qzmssm1fnkl81.png"
-          alt=""
+      {posts.map((p, index) => (
+        <Post
+          key={index}
+          usuarioImagem={p.usuarioImagem}
+          usuarioNome={p.usuarioNome}
+          imagemPost={p.imagemPost}
+          imagemSeguidor={p.imagemSeguidor}
+          curtidoPor={p.curtidoPor}
+          numeroCurtidas={p.numeroCurtidas}
         />
-        <div className="inferior">
-          <div className="icones-inferior">
-            <div>
-              <ion-icon name="heart-outline"></ion-icon>
-              <ion-icon name="chatbubble-outline"></ion-icon>
-              <ion-icon name="paper-plane-outline"></ion-icon>
-            </div>
-            <div>
-              <ion-icon name="bookmark-outline"></ion-icon>
-            </div>
-          </div>
-          <div className="comentarios">
-            <img
-              src="https://criticalhits.com.br/wp-content/uploads/2022/03/one-piece-manga-1044-luffy-despertar-gear-5-fanart-postcover-768x432.jpg"
-              alt=""
-            />
-            <span>
-              Curtido por <a href="">usuario</a> e
-              <a href="">outras 101.523 pessoas</a>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div className="post">
-        <div className="superior">
-          <div>
-            <img
-              src="https://styles.redditmedia.com/t5_12nxv0/styles/communityIcon_h8x1zlgsmt231.jpg?width=256&format=pjpg&s=148eb490d4e25fa3c4f1890ccefcf4d633f86fdc"
-              alt=""
-            />
-            <span>pescocofino</span>
-          </div>
-          <div className="more">
-            <ion-icon name="ellipsis-horizontal"></ion-icon>
-          </div>
-        </div>
-        <img
-          className="foto-post"
-          src="https://i.redd.it/qzmssm1fnkl81.png"
-          alt=""
-        />
-        <div className="inferior">
-          <div className="icones-inferior">
-            <div>
-              <ion-icon name="heart-outline"></ion-icon>
-              <ion-icon name="chatbubble-outline"></ion-icon>
-              <ion-icon name="paper-plane-outline"></ion-icon>
-            </div>
-            <div>
-              <ion-icon name="bookmark-outline"></ion-icon>
-            </div>
-          </div>
-          <div className="comentarios">
-            <img
-              src="https://criticalhits.com.br/wp-content/uploads/2022/03/one-piece-manga-1044-luffy-despertar-gear-5-fanart-postcover-768x432.jpg"
-              alt=""
-            />
-            <span>
-              Curtido por <a href="">usuario</a> e{" "}
-              <a href="">outras 101.523 pessoas</a>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div className="post">
-        <div className="superior">
-          <div>
-            <img
-              src="https://styles.redditmedia.com/t5_12nxv0/styles/communityIcon_h8x1zlgsmt231.jpg?width=256&format=pjpg&s=148eb490d4e25fa3c4f1890ccefcf4d633f86fdc"
-              alt=""
-            />
-            <span>pescocofino</span>
-          </div>
-          <div className="more">
-            <ion-icon name="ellipsis-horizontal"></ion-icon>
-          </div>
-        </div>
-        <img
-          className="foto-post"
-          src="https://i.redd.it/qzmssm1fnkl81.png"
-          alt=""
-        />
-        <div className="inferior">
-          <div className="icones-inferior">
-            <div>
-              <ion-icon name="heart-outline"></ion-icon>
-              <ion-icon name="chatbubble-outline"></ion-icon>
-              <ion-icon name="paper-plane-outline"></ion-icon>
-            </div>
-            <div>
-              <ion-icon name="bookmark-outline"></ion-icon>
-            </div>
-          </div>
-          <div className="comentarios">
-            <img
-              src="https://criticalhits.com.br/wp-content/uploads/2022/03/one-piece-manga-1044-luffy-despertar-gear-5-fanart-postcover-768x432.jpg"
-              alt=""
-            />
-            <span>
-              Curtido por <a href="">usuario</a> e{" "}
-              <a href="">outras 101.523 pessoas</a>
-            </span>
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }
