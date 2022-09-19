@@ -11,6 +11,10 @@ export default function Usuario(props) {
 
   function mudarImagem() {
     const imagem = prompt("Qual url da imagem ?");
+    if (imagem === "") {
+      setImagem(props.usuarioImagem);
+      return;
+    }
     setImagem(imagem);
   }
 

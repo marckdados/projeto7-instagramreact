@@ -1,3 +1,6 @@
+import React from "react";
+
+import Superior from "./Superior";
 const posts = [
   {
     usuarioImagem:
@@ -32,54 +35,86 @@ const posts = [
     numeroCurtidas: 126753,
   },
 ];
-
-function Superior(props) {
-  return (
-    <div className="superior">
-      <div>
-        <img src={props.usuarioImagem} alt="Imagem Perfil Usuario" />
-        <span>{props.usuarioNome}</span>
-      </div>
-      <div className="more">
-        <ion-icon name="ellipsis-horizontal"></ion-icon>
-      </div>
-    </div>
-  );
-}
 function Inferior(props) {
+  const [salvo, setSalvo] = React.useState("bookmark-outline");
+
+  function salvar() {
+    salvo === "bookmark-outline"
+      ? setSalvo("bookmark")
+      : setSalvo("bookmark-outline");
+  }
+
+  function alterarNumeroCurtidas() {
+    if (props.curtidas === props.numeroCurtidas) {
+      props.setCurtidas(props.curtidas + 1);
+      props.setCoracao("heart");
+      props.setCor("md hydrated curtida");
+    } else {
+      props.setCurtidas(props.curtidas - 1);
+      props.setCoracao("heart-outline");
+      props.setCor("md hydrated");
+    }
+  }
   return (
     <div className="inferior">
       <div className="icones-inferior">
         <div>
-          <ion-icon name="heart-outline"></ion-icon>
+          <ion-icon
+            onClick={alterarNumeroCurtidas}
+            name={props.coracao}
+            class={props.cor}
+          ></ion-icon>
           <ion-icon name="chatbubble-outline"></ion-icon>
           <ion-icon name="paper-plane-outline"></ion-icon>
         </div>
         <div>
-          <ion-icon name="bookmark-outline"></ion-icon>
+          <ion-icon onClick={salvar} name={salvo}></ion-icon>
         </div>
       </div>
       <div className="comentarios">
         <img src={props.imagemSeguidor} alt="Imagem Seguidor" />
         <span>
-          Curtido por {props.curtidoPor} e outras {props.numeroCurtidas} pessoas
+          Curtido por {props.curtidoPor} e outras {props.curtidas} pessoas
         </span>
       </div>
     </div>
   );
 }
+
 function Post(props) {
+  const [curtidas, setCurtidas] = React.useState(props.numeroCurtidas);
+  const [cor, setCor] = React.useState("md hydrated");
+  const [coracao, setCoracao] = React.useState("heart-outline");
+
+  function postImagem() {
+    if (curtidas === props.numeroCurtidas) {
+      setCurtidas(curtidas + 1);
+      setCoracao("heart");
+      setCor("md hydrated curtida");
+    }
+  }
   return (
     <div className="post">
       <Superior
         usuarioImagem={props.usuarioImagem}
         usuarioNome={props.usuarioNome}
       />
-      <img className="foto-post" src={props.imagemPost} alt="POST" />
+      <img
+        className="foto-post"
+        onClick={postImagem}
+        src={props.imagemPost}
+        alt="POST"
+      />
       <Inferior
         curtidoPor={props.curtidoPor}
         imagemSeguidor={props.imagemSeguidor}
         numeroCurtidas={props.numeroCurtidas}
+        curtidas={curtidas}
+        setCurtidas={setCurtidas}
+        cor={cor}
+        setCor={setCor}
+        coracao={coracao}
+        setCoracao={setCoracao}
       />
     </div>
   );

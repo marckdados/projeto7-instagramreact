@@ -40,7 +40,7 @@ function Stories(props) {
   console.log(props.nome);
   return (
     <div className="lugarzinho">
-      <img className="foto-stores" src={props.imagem} alt={props.nome} />
+      <img className="foto-stories" src={props.imagem} alt={props.nome} />
       <div className="nome-stories">{props.nome}</div>
     </div>
   );

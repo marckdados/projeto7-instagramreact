@@ -94,14 +94,18 @@ div > ion-icon {
   position: absolute;
   right: 0;
 }
-.foto-stores {
+.foto-stories {
   height: 55px;
   width: 55px;
   border-radius: 50%;
-  border: 2px solid red;
+  padding: 2px;
+  background: linear-gradient(45deg, rgb(255, 230, 0), rgb(255, 0, 128) 80%);
 }
 .perfil img {
   cursor: pointer;
+}
+.curtida {
+  color: rgb(230, 0, 0);
 }
 .nome-stories {
   padding: 2px 0;

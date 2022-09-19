@@ -1,3 +1,4 @@
+import logoMobile from "./assets/logo.png";
 export default function TopoMobile() {
   return (
     <div className="topo-mobile">
@@ -5,7 +6,7 @@ export default function TopoMobile() {
         <ion-icon name="logo-instagram"></ion-icon>
       </div>
       <div>
-        <img src="./images/logo.png" alt="" />
+        <img src={logoMobile} alt="" />
       </div>
       <div>
         <ion-icon name="paper-plane-outline"></ion-icon>

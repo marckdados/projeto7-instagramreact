@@ -1,10 +1,11 @@
+import logo from "./assets/logo.png";
 export default function Topo() {
   return (
     <div className="topo">
       <div>
         <ion-icon name="logo-instagram"></ion-icon>
         <div className="barra"></div>
-        <img src="../public/img/logo.png" alt="Logo Instagram" />
+        <img src={logo} alt="Logo Instagram" />
       </div>
       <div>
         <input className="pesquisa" type="text" placeholder="Pesquisa" />
