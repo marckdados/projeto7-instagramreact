@@ -41,7 +41,7 @@ function Stories(props) {
   return (
     <div className="lugarzinho">
       <img className="foto-stores" src={props.imagem} alt={props.nome} />
-      <div>{props.nome}</div>
+      <div className="nome-stories">{props.nome}</div>
     </div>
   );
 }

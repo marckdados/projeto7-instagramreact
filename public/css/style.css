@@ -100,6 +100,13 @@ div > ion-icon {
   border-radius: 50%;
   border: 2px solid red;
 }
+.perfil img {
+  cursor: pointer;
+}
+.nome-stories {
+  padding: 2px 0;
+  font-size: 12px;
+}
 .caixa-posts {
   width: 100%;
 }

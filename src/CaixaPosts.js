@@ -4,7 +4,7 @@ const posts = [
       "https://images.pexels.com/photos/13428312/pexels-photo-13428312.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     usuarioNome: "anderson",
     imagemPost:
-      "https://images.pexels.com/photos/13428310/pexels-photo-13428310.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+      "https://cdn.ome.lt/POrJ2S1KTmsyofc4GK_QRZyF7bk=/970x360/smart/uploads/conteudo/fotos/meme-aspas-loud-2.jpg",
     curtidoPor: "juniorsouza",
     imagemSeguidor:
       "https://images.pexels.com/photos/10954791/pexels-photo-10954791.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
@@ -14,12 +14,22 @@ const posts = [
     usuarioImagem:
       "https://images.pexels.com/photos/10083650/pexels-photo-10083650.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     usuarioNome: "klauss",
-    imagemPost:
-      "https://images.pexels.com/photos/13651665/pexels-photo-13651665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    imagemPost: "https://pbs.twimg.com/media/FK8oDvlXMAMMoKl.jpg",
     curtidoPor: "zezinho",
     imagemSeguidor:
       "https://images.pexels.com/photos/11735730/pexels-photo-11735730.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     numeroCurtidas: 300,
+  },
+  {
+    usuarioImagem:
+      "https://yt3.ggpht.com/hBufrTeLwDxrrZOjMsQEooQrne6pRAhdSFhOivYfq5gywsmpYmmRLK24YaDZKN3AdGNvX0Z0=s900-c-k-c0x00ffffff-no-rj",
+    usuarioNome: "LOUD",
+    imagemPost:
+      "https://i.superesportes.com.br/9T6KMSA6glKyuzbgx8RuM2s-1XY=/smart/imgsapp.mg.superesportes.com.br/app/noticia_126420360808/2022/09/17/3976335/time-da-loud-finalista-do-valorant-champions-2022-composto-por-sacy-aspas-bzka-coach-saadhak-less-e-pancada_1_164228.jpg",
+    curtidoPor: "optic",
+    imagemSeguidor:
+      "https://images.pexels.com/photos/11735730/pexels-photo-11735730.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    numeroCurtidas: 126753,
   },
 ];
 
